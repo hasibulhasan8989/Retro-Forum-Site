@@ -84,7 +84,7 @@
             <div id="api-container" class="mt-6">
 
                 <div class="max-w-[772px] min-h-[ 270px] border p-16 bg-[#F3F3F5] rounded-xl space-y-4 flex gap-5 ">
-                    <div class="avatar max-h-[80px] avatar-online">
+                    <div class="avatar max-h-[80px] avatar-offline">
                         <div class="w-[80px]  rounded-full p-2">
                           <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
                         </div>
@@ -124,32 +124,54 @@
 
 
             </div>
-            <div class="bg-[#12132D0D] min-w-[375px] max-h-[465px] rounded-xl">
-                <div class="p-10 flex justify-between">
-                 <p>Title</p>
-                 <P>Mark as read (4)</P>
-                </div>
-
-                <div id="check-box"  class="px-4">
-
-
-                    <div class=" flex justify-between bg-white p-5 rounded-xl">
-                        <p class="w-[212px]">10 Kids Unaware of Their Halloween Costume</p>
-                        <div>
-                            <i class="fa-regular fa-eye"></i>
-                            <p>1,568</p>
-    
-                        </div>
-                        
+            <div>
+                <div class="bg-[#12132D0D] min-w-[375px] min-h-[465px] rounded-xl">
+                    <div class="p-10 flex justify-between">
+                     <p>Title</p>
+                     <P>Mark as read (<span id="count-click">0</span>)</P>
                     </div>
-                </div>
-
-
-             </div>
+    
+                    <div id="check-box"  class="px-4">
+    
+    
+                        <div class=" flex justify-between bg-white p-5 rounded-xl">
+                            <p class="w-[212px]">10 Kids Unaware of Their Halloween Costume</p>
+                            <div>
+                                <i class="fa-regular fa-eye"></i>
+                                <p>1,568</p>
+        
+                            </div>
+                            
+                        </div>
+                    </div>
+    
+    
+                 </div>
+            </div>
            </div>
 
         </section>
+
+        <section>
+
+        </section>
+           <!-- latest post section -->
+        <section>
+            <div class="text-center space-y-4 my-10">
+                <h1 class="color1 text-4xl font-black">Latest Posts</h1>
+                <p class="text-xl inter">
+                    Yes, you can run unit tests and view the results directly within the app. The <br> integrated testing features allow for a streamlined .
+                </p>
+            </div>
+
+             <div id="latestPostContainer" class="grid grid-cols-3">
+                
+
+             </div>
+        </section>
     </main>
+
+
     <footer></footer>
 
 
