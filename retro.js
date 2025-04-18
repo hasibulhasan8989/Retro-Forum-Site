@@ -20,7 +20,7 @@ const displayPost = (posts) => {
     const div = document.createElement("div");
     div.innerHTML = `
 
-                  <div class="avatar check-online max-h-[80px] ">
+                  <div id="${post.author.name}" class="avatar max-h-[80px] ">
                         <div class="w-[80px]  rounded-full p-2">
                           <img  src="${post.image}" />
                         </div>
@@ -71,10 +71,16 @@ const displayPost = (posts) => {
     );
   
 
-   
+    
+    const isActive=post.isActive
+    const author=post.author.name
+    checkActive(isActive,author)
+
+
+ 
     
 });
-
+console.log(posts)
 
 };
 const input=document.getElementById('inputField')
@@ -115,7 +121,7 @@ const fetchByCategory=async(inputValue)=>{
    
     
      
-    div.classList.add('flex','justify-between','bg-white','p-5','rounded-xl','my-5') 
+    div.classList.add('flex','justify-between','bg-white','p-5','rounded-xl','mb-6') 
     checkBox.appendChild(div)
    
     
@@ -139,7 +145,7 @@ const fetchByCategory=async(inputValue)=>{
      const latestPostContainer=document.getElementById('latestPostContainer')
      
     data.map((dt)=>{
-      console.log(dt)
+     
       const div= document.createElement('div')
     div.innerHTML=`<figure>
                       <img
@@ -170,13 +176,45 @@ const fetchByCategory=async(inputValue)=>{
    latestPostContainer.appendChild(div) })
 
   }
+ 
 
   fetchLatestPost()
 
 
 fetchData();
 
+const avatar=document.getElementsByClassName('avatar')
+   console.log(avatar)
+  
+const checkActive=(isActive,author)=>{
+    if(isActive){
+      const diva=  document.getElementById(author)
+      diva.classList.add('avatar-online')
+    }
+    else{
+        const diva=  document.getElementById(author)
+        diva.classList.add('avatar-offline','[&.avatar-offline]:before:bg-red-500')
+    }
+    console.log(isActive)
+    console.log(author)
 
+}
+
+
+// const isOk=(isActive)=>{
+
+//   const avatar=document.getElementsByClassName('avatar')
+//   console.log(avatar)
+//   for(let bd of avatar){
+//     if(!isActive)
+//     bd.classList.add('avatar-offline')
+//     else{
+//         bd.classList.add('avatar-online')
+//     }
+  
+//   }
+  
+// }
 
 
 
