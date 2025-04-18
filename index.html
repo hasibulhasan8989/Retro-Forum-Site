@@ -1,14 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Retro-Forum-Site</title>
+    <script src="https://kit.fontawesome.com/e9ddb11f46.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="Styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+
+
 </head>
-<body>
- 
+
+<body class="mulish">
+
+    <header class=" container mx-auto mt-10">
+        <!-- Icon and Site Name -->
+        <div class="flex justify-between">
+            <div>
+                <h1 class="text-[#12132D] font-black text-4xl">ReTro</h1>
+            </div>
+            <div class="space-x-5">
+                <i class="fa-solid fa-house text-2xl"></i>
+                <i class="fa-solid fa-pen text-2xl"></i>
+                <i class="fa-solid fa-user-plus text-2xl"></i>
+                <i class="fa-regular fa-flag text-2xl"></i>
+                <button class="btn btn1 px-7 py-6">Sign In</button>
+
+
+            </div>
+        </div>
+        <!-- Banner -->
+        <section
+            class="container mx-auto  bg-[#12132D] flex items-center gap-80 min-h-[550px] p-16  bg-[url(images/bgbanner.png)] bg-no-repeat  bg-cover bg-bottom rounded-2xl  my-14">
+
+            <div class="space-y-10">
+                <h1 class="font-black text-6xl text-white">Welcome to the <br> <span class="color1">ReTro</span> Forum
+                </h1>
+                <p class="text-2xl text-white">Share your favorite opinion and win and wp <br> forum coffee mug!</p>
+                <div class="flex items-center">
+                    <input id="inputField" type="text" placeholder="Search here anything" class="input rounded-[50px] py-7 " />
+                    <button onclick="findInput()" class="btn  btn1 px-7 py-6 -ml-32 z-10">Search</button>
+                </div>
+            </div>
+            <div class="p-10 max-h-[220px] bg-white rounded-2xl">
+                <div class="flex items-center gap-10 ">
+                    <div class="space-y-1">
+                        <p>Registered Users</p>
+                        <p>Forum</p>
+                        <p>Topics</p>
+                        <p>Replies</p>
+                    </div>
+                    <div class="space-y-1">
+                        <p>1</p>
+                        <p>2</p>
+                        <p>3</p>
+                        <p>4</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </section>
+
+    </header>
+    <main class="container mx-auto">
+        <section>
+            <div class="text-center space-y-4 ">
+                <h1 class="color1 text-3xl font-black">Let’s Discuss</h1>
+                <p class="text-xl inter">Yes, you can run unit tests and view the results directly within the app. The
+                    <br>integrated testing features allow for a streamlined .</p>
+            </div>
+            <!-- api Section -->
+           <div class="flex justify-between ">
+            <div id="api-container" class="mt-6">
+
+                <div class="max-w-[772px] min-h-[ 270px] border p-16 bg-[#F3F3F5] rounded-xl space-y-4 flex gap-5 ">
+                    <div class="avatar max-h-[80px] avatar-online">
+                        <div class="w-[80px]  rounded-full p-2">
+                          <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                        </div>
+                      </div>
+                    <div class="space-y-4">
+                        <div class="flex gap-4">
+                            <p>#<span>Coding</span>
+                            </p>
+                            <p> Author :<span>Safia Chowdhury</span>
+                            </p>
+
+                        </div>
+                        <p class="color1 font-bold text-2xl">10 Kids Unaware of Their Halloween Costume</p>
+                        <p class="max-w-[569px] text-xl">It’s one thing to subject yourself to ha Halloween costume
+                            mishap because, hey that’s your prerogative</p>
+                        <hr>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-4">
+                                <i class="fa-regular fa-comment"></i>
+                                <p>50</p>
+                                <i class="fa-regular fa-eye"></i>
+                                <p>44</p>
+                                <i class="fa-regular fa-clock"></i>
+                                <p>pp</p>
+                                
+                            </div>
+                            <button class="btn rounded-full ">
+                                <img src="images/email 1.jpg" alt="">
+                            </button> 
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+                
+
+
+            </div>
+            <div class="bg-[#12132D0D] min-w-[375px] max-h-[465px] rounded-xl">
+                <div class="p-10 flex justify-between">
+                 <p>Title</p>
+                 <P>Mark as read (4)</P>
+                </div>
+
+                <div id="check-box"  class="px-4">
+
+
+                    <div class=" flex justify-between bg-white p-5 rounded-xl">
+                        <p class="w-[212px]">10 Kids Unaware of Their Halloween Costume</p>
+                        <div>
+                            <i class="fa-regular fa-eye"></i>
+                            <p>1,568</p>
     
+                        </div>
+                        
+                    </div>
+                </div>
+
+
+             </div>
+           </div>
+
+        </section>
+    </main>
+    <footer></footer>
+
 
     <script src="retro.js"></script>
 </body>
+
 </html>
